@@ -11,7 +11,8 @@ app.use(router);
 app.use("/assets", express.static('assets'));
 
 connectToDb();
-app.listen(5001, () => {
+const port = process.env.PORT || 5001
+app.listen(port, () => {
     console.log("kết nối được rồi");
 });
 
